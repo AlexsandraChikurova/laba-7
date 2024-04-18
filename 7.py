@@ -20,6 +20,7 @@ def pug2():
 
     res_i=image.transpose(Image.FLIP_LEFT_RIGHT)
     res_i.save("pug1.jpg")
+    print("Обработка изображений завершена.")
 def pug3():
     nach = 'D:/Чикурова Александра 1-МД-4'
     obrabot = 'D:/Чикурова Александра 1-МД-4/pugpug'
@@ -65,4 +66,22 @@ def pug4():
         new_image_name = 'watermarked_' + image_name
         image.save(os.path.join(obrabotan , new_image_name))
     print("Добавление водяного знака завершено.")
-pug4()
+while True:
+    print('1. показ картинки')
+    print('2. транспортировать')
+    print('3. 5 фото')
+    print('4. водяной знак')
+    print('5. Выход')
+    a = int(input('Выберите действие: '))
+    if a == 1:
+        pug1()
+    elif a == 2:
+        pug2()
+    elif a == 3:
+        pug3()
+    elif a == 4:
+        pug4()
+    elif a == 5:
+        break
+    else:
+        print('Неверное действие')
